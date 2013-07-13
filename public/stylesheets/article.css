@@ -1,0 +1,35 @@
+
+.article-list {
+
+}
+
+.article {
+    border: 1px solid #ddd;
+    margin: 0 0 17px;
+    padding: 0 16px 16px 16px;
+}
+
+.article .picture {
+    float: left;
+}
+
+.article .entry-meta {
+    clear: both;
+    margin-top: 20px;
+}
+.article .entry-meta .byline {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+.article .entry-meta a{
+    text-decoration: none;
+}
+
+.article .entry-meta .score {
+    float: left;
+}
+.article .entry-meta .comments {
+    float: right;
+}
