@@ -1,5 +1,5 @@
 source 'http://ruby.taobao.org'
-gem "rails", "~> 3.2.1"
+gem "rails", "~> 3.2.3"
 platforms :ruby, :mingw do
   # use mysql
   gem 'mysql2'
@@ -39,6 +39,7 @@ gem "calendar_helper"
 gem 'rails_autolink'
 gem 'acts_as_favorite', :git => 'https://github.com/ShiningRay/acts_as_favorite.git'
 gem 'acts_as_taggable_on_steroids', :git => 'https://github.com/ShiningRay/acts_as_taggable_on_steroids.git', :require => 'acts_as_taggable'
+#gem "acts_as_taggable_on_steroids", "~> 1.2"
 gem 'alias_fallback', :git => 'https://github.com/ShiningRay/alias_fallback.git'
 gem "rolify"
 

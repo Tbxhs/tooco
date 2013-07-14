@@ -3,10 +3,9 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-  protect_from_forgery # :secret => 'd7f14b6ea460ab510ef00c7049c8bb56'
+  #protect_from_forgery # :secret => 'd7f14b6ea460ab510ef00c7049c8bb56'
   helper :all
   include AuthenticatedSystem
-  include RoleRequirementSystem
   include ViewControlMethods
   #theme_support
   alias_method :current_theme, :theme_name
@@ -34,6 +33,7 @@ class ApplicationController < ActionController::Base
     #if request.host.index(group.inherited(:domain))
     #     redirect_to "#{request.protocol}#{request.host}#{(request.port == 80 ? '' : request.port_string)}#{request.path}#{(request.query_string.empty? ? '' : '?' + request.query_string )}"
     return unless group
+    return unless Setting.use_canonical_url
     domain = group.inherited(:domain)
     if request.get? and !domain.blank? and request.host != domain and request.format.html?
       redirect_to "#{request.protocol}#{domain}#{(request.port == 80 ? '' : request.port_string)}#{request.path}#{(request.query_string.empty? ? '' : '?' + request.query_string )}"
