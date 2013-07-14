@@ -5,7 +5,7 @@ class Article < ActiveRecord::Base
 
 # tag_line: string, group_id: integer, user_id: integer, title: string, status: string, comment_status: string, anonymous: boolean, created_at: datetime, updated_at: datetime, picture_file_name: string, picture_content_type: string, picture_file_size: integer, picture_updated_at: datetime, email: string, pos: integer, neg: integer, score: integer, published_at: datetime, content: text, alt_score: integer
 
-  attr_accessible :title,:user_id,:content,:tag_line
+  attr_accessible :title,:user_id,:content,:tag_line,:status
 
   include AntiSpam
   # harmonize :title, :content, :tag_line

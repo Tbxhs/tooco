@@ -1,7 +1,7 @@
 <% content_for :title do %>写新纸条<% end %>
 <%=render :partial => 'nav'%>
 <%= form_for(@message) do |f| %>
-  <%= f.error_messages %>
+  <%=@message.errors.full_messages%>
 <%= f.label :recipient, '写给：' %>
   <% if @message.recipient  %>
   <p style="background:url(<%= @message.recipient.avatar.url("thumb") %>) no-repeat top 320px;height:40px;">

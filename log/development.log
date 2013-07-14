@@ -12969,3 +12969,5 @@ Processing by ArticlesController#show as HTML
   Rendered skeleton/_javascripts.html.erb (1.2ms)
   Rendered layouts/skeleton.html.erb (10.9ms)
 Completed 200 OK in 367ms (Views: 339.6ms | ActiveRecord: 12.7ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml

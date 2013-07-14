@@ -2,7 +2,7 @@
 #
 #
 class Post < ActiveRecord::Base
-  attr_accessible :content,:parent_id,:title
+  attr_accessible :content,:parent_id,:title,:user_id
   has_many  :comments
   belongs_to :user
   belongs_to :parent, :class_name => 'Post'

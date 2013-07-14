@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Page < ActiveRecord::Base
+  attr_accessible :user_id,:parent_id,:group_id, :title, :content, :slug
   belongs_to :group
   belongs_to :user
   belongs_to :parent, :class_name => 'Page'

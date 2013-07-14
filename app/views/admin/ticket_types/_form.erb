@@ -1,5 +1,5 @@
 <%= form_for([:admin, form]) do |f| %>
-  <%= f.error_messages %>
+  <%=f.errors.full_messages%>
 
   <p>
     <%= f.label :name %><br />

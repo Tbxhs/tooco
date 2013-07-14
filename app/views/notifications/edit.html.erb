@@ -1,7 +1,7 @@
 <h1>Editing notification</h1>
 
 <%= form_for(@notification) do |f| %>
-  <%= f.error_messages %>
+  <%=@notification.errors.full_messages%>
 
   <p>
     <%= f.label :user_id %><br />

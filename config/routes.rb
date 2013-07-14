@@ -145,7 +145,8 @@ Moumentei::Application.routes.draw do
    #  match ':domain/archives/:year/:month/:day'=> "groups#archives", :requirements => { :domain => /[a-zA-Z0-9\-\.]+/ }
    #  match ':domain/:action', :controller => 'groups', :requirements => { :domain => /[\w\-\.]+/ }
    namespace 'admin' do
-      match 'statistic/:action' => 'statistic'
+      #match '/statistic/:action' ,:controller=> 'statistic'
+      resources :statistic
       match '/' => 'dashboard#index', :as => :dashboard
 
       resources :users do
@@ -198,13 +199,18 @@ Moumentei::Application.routes.draw do
             post :generate
          end
       end
-      #resources :reports, member do
-      #:ignore => :post, :remove => :post
-      #end,
-      #  collection do
-      #:batch => :post
-      #end
+#      resources :reports
+      resources :reports do
+      member do
+        post :ignore
+        post :remove
+      end
+       collection do
+        post :batch
+      end
+   end
       resource :setting, :only => [:edit, :update]
+
       #resource :configuration, :only => [:edit, :update], collection do
       #:restart => :post
       #end

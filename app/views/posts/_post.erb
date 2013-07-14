@@ -23,7 +23,7 @@
       <%= link_to( post, :rel => 'bookmark', :class => "entry-date" ) do %>
         <span data="{time:'Tue Sep 07 21:32:58 +0000 2010'}" class="published timestamp"><%= time_ago_in_words post.created_at if post.created_at%></span>
       <% end %>
-      <span>via web</span>
+      <span>来自: 网页</span>
       <% if post.parent %>
         <%= link_to "回复#{post.parent.user.login}", post.parent %>
       <% end %>

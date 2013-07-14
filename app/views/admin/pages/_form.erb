@@ -1,6 +1,6 @@
 
 <%= form_for([:admin, @page]) do |f| %>
-  <%= f.error_messages %>
+  <%=@page.errors.full_messages%>
 
   
     <%= f.label :group_id %>

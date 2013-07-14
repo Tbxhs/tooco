@@ -1,7 +1,7 @@
 <h1> invitation_code</h1>
 
 <%= form_for([:admin, @invitation_code]) do |f| %>
-  <%= f.error_messages %>
+  <%=@invitation_code.errors.full_messages%>
   <p>
     <%= f.label :applicant_id %><br />
     <%= f.text_field :applicant_id %>
